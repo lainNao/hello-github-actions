@@ -5,6 +5,8 @@ name: jest
 on:
   push:
     branches: [ first-action ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   jest:

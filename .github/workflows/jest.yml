@@ -1,0 +1,18 @@
+# アクション名
+name: jest
+
+# タイミングを指定
+on:
+  push:
+    branches: [ first-action ]
+
+jobs:
+  jest:
+    name: jest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: install dependencies
+        run: npm i
+      - name: run jest
+        run: npm run test
